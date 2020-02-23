@@ -11,7 +11,8 @@ import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
     NgxBootstrapModule
   ],
   exports: [
-    CommonModule
+    CommonModule,
+    NgxBootstrapModule
   ]
 })
 export class SharedModule { }

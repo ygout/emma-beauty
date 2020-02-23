@@ -7,6 +7,7 @@ import { ContactModule } from './contact/contact.module';
 import { PrestationsModule } from './prestations/prestations.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { SharedModule } from '../shared/shared.module';
+import { SharedPublicModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     HomeModule,
     ContactModule,
     PrestationsModule,
-    PortfolioModule
+    PortfolioModule,
+    SharedPublicModule
   ]
 })
 export class PublicModule { }
