@@ -1,35 +1,58 @@
-.navbar-items {
-  height: 3.125em;
+/*
+ * Styles
+ */
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-brand:hover {
-  color: black;
-  text-decoration: none;
+.navbar-custom {
+  font-family: "Open Sans", Arial, Tahoma, sans-serif;
+  background-color: white;
 }
 
 .logo-title {
   font-family: "Parisienne", cursive;
-  font-size: 3em;
-  color: black;
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar-custom {
-  color: #9B9B9B;
-  background-color: #ffffff;
-  font-family: "Open Sans", Arial, Tahoma, sans-serif;
+.nav-item-brand {
+  margin-top: -20px;
+}
+
+main {
+  font-family: 'Dancing Script', cursive;
+}
+
+.nav-item {
   font-size: 1.2em;
 }
 
-.navbar-item a {
+.navbar-nav .nav-link, .navbar-nav .nav-link-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar-nav .nav-link-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+}
+
+.nav-link-brand, .nav-link-brand:hover {
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar-link a:hover {
-  color: #ECBDC4;
+.nav-link:hover {
+  color: #ECBDC4 !important;
 }
 
-.navbar-link a:after {
+.nav-link:after {
   content: '';
   display: flex;
   left: 0;
@@ -38,34 +61,17 @@
   background-color: #ECBDC4;
 }
 
-.navbar-link a:after {
+.nav-link:after {
   opacity: 0;
   transform: translateY(4px);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
 
-.navbar-link a:hover:after, .navbar-link a:focus:after {
+.nav-link:hover:after, .nav-link:focus:after {
   opacity: 1;
   transform: translateY(0);
 }
 
-.navbar-link a:hover:after, .navbar-link a:focus:after {
+.nav-link:hover:after, .nav-link:focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
-}
-
-@media only screen and (max-width: 650px) {
-  .navbar-items,
-.navbar-custom,
-.center-navbar-items,
-.left-navbar-items,
-.right-navbar-items {
-    flex-direction: column;
-  }
-  .navbar-custom,
-.navbar-items {
-    height: 100%;
-  }
-  .navbar-item {
-    margin-top: 12px;
-  }
 }

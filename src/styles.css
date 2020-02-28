@@ -4,6 +4,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9633,4 +9635,10 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }

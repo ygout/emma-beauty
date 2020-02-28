@@ -1,0 +1,10 @@
+.banner-txt-container {
+  left: 60%;
+}
+
+.banner-txt {
+  color: #fff;
+  font-weight: 100;
+  font-family: "Open Sans", Arial, Tahoma, sans-serif;
+  font-size: 50px;
+}

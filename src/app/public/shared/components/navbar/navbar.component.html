@@ -1,24 +1,42 @@
-<!-- Navigation -->
-<nav class="navbar-custom container-fluid py-5 static-top">
+<nav class="navbar navbar-expand-lg navbar-custom navbar-light fixed-top" [ngClass]= "sticky ? 'py-2': 'py-5' "#stickyMenu>
   <div class="container">
-  <div class="navbar-items d-flex flex-row justify-content-between">
-    <!--Left Nav-->
-    <div class="d-flex h-100 col-md-3 align-items-center justify-content-end">
-      <div class="navbar-item col-md-auto navbar-link"><a href="#">ACCUEIL </a></div>
-      <div class="navbar-item col-md-auto navbar-link"><a href="#">PRESTATIONS </a></div>
-      <div class="navbar-item col-md-auto navbar-link"><a href="#">GALLERIE </a></div>
+    <span class="logo-title d-lg-none">Elegant & Glamour</span>
+    <button
+      class="navbar-toggler mr-auto"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar10"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" [ngClass]="{ 'show': navbarOpen }" id="navbar10">
+      <ul class="navbar-nav justify-content-between w-100 align-items-start ">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Préstations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Galerie</a>
+        </li>
+        <li class="d-none d-lg-block float">
+          <h1 class="logo-title" [ngStyle]="{'font-size': sticky ? '2em': '3em'}">
+            <a class="nav-link-brand" href="#">Elegant & Glamour</a>
+          </h1>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fab fa-instagram fa-2x" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fab fa-facebook fa-2x" href="#"></a>
+        </li>
+      </ul>
     </div>
-    
-    <!--Middle Nav-->
-    <div class="d-flex h-100 align-items-center">
-      <a class="navbar-brand logo-title" href="#">Élegant & Glamorous</a>
-    </div>
-    <!--Right Nav-->
-    <div class="d-flex h-100 col-md-3 align-items-center">
-      <div class="navbar-item col-md-auto navbar-link"><a href="#">CONTACT </a></div>
-      <div class="navbar-item col-md-auto navbar-link"><a class="fab fa-instagram fa-2x" href="#"></a></div>
-      <div class="navbar-item col-md-auto navbar-link"><a class="fab fa-facebook fa-2x" href="#"></a></div>
-    </div>
-  </div>
   </div>
 </nav>
