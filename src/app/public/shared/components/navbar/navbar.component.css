@@ -15,6 +15,7 @@ html {
 .logo-title {
   font-family: "Parisienne", cursive;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 3em;
 }
 
 .nav-item-brand {
