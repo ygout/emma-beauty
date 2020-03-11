@@ -11,7 +11,8 @@ import { ProtectedModule } from '../protected/protected.module';
     CommonModule,
     PublicModule,
     ProtectedModule
-  ]
+  ],
+  exports: []
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
