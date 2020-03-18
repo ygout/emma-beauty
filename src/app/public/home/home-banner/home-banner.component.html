@@ -3,7 +3,7 @@
         <div class="col-12 text-center d-flex ">
             <img class="img-fluid of " [src]="bannerUrlPath">
         </div>
-        <div class="position-absolute banner-txt-container">
+        <div *ngIf = "display" class="position-absolute banner-txt-container" >
             <p class="banner-txt">
                 Vous rendre belle <br>
                 naturellement
