@@ -5,3 +5,48 @@
 .footer-link {
   color: #FF79A2;
 }
+
+/* CSS */
+// .btn-scroll-top {
+//   bottom: 64px;
+//   right: 1rem;
+//   transition: opacity 0.25s ease-in-out;
+//   z-index: 1000;
+// }
+
+.btn-scroll-top {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-scroll-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  top: 11px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-scroll-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.btn-scroll-top:hover i {
+  color: #fff;
+  top: 5px;
+}
