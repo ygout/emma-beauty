@@ -19,7 +19,6 @@ import { SharedPublicModule } from './shared/shared.module';
     PrestationsModule,
     PortfolioModule,
     SharedPublicModule,
-
   ]
 })
 export class PublicModule { }
