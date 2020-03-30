@@ -1,0 +1,41 @@
+.accordion-card {
+  border: 1px solid transparent;
+  border-color: #e1e1e1;
+  border-radius: 5px;
+  padding: 18px 15px 18px 40px;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+}
+.accordion-price {
+  font-weight: bold;
+  margin-top: 16px;
+  text-transform: uppercase;
+  color: #ec4863;
+}
+
+.accordion-title {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.accordion-title:before {
+  content: "\f067";
+  font-size: 18px;
+  margin-right: 10px;
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+}
+
+.accordion-content {
+  display: none;
+}

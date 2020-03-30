@@ -1,0 +1,19 @@
+.category-title:before {
+  background-color: #ec4863;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 21px;
+}
+
+.category-title {
+  font-family: Julius Sans One;
+}
+
+.wrapper-category {
+  margin-left: 10%;
+}
+

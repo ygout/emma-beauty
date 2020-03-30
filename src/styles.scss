@@ -2,8 +2,17 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap");
 body,
 html {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.subheader {
+  background-image: url("./assets/images/subheader-flower.jpg");
+  height: 100px;
+  background-repeat: repeat;
+  background-position: bottom right;
+
 }

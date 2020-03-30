@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PrestationsComponent } from './prestations/prestations.component';
 import { PrestationCardComponent } from './prestation-card/prestation-card.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PrestationCategoryComponent } from './prestation-category/prestation-category.component';
 
 
 
 @NgModule({
-  declarations: [PrestationsComponent, PrestationCardComponent],
+  declarations: [PrestationsComponent, PrestationCardComponent, PrestationCategoryComponent],
   imports: [
     SharedModule
   ]
