@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-prestation-card',
@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrestationCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() isOpen: boolean = false;
+  /**
+   * Emitted when user clicks on group titlebar
+   * @type {EventEmitter<any>}
+   */
+  @Output() toggle: EventEmitter<any> = new EventEmitter<any>();
 
+  constructor() { }
   ngOnInit(): void {
   }
 
