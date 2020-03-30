@@ -1,5 +1,8 @@
 <h1 class="text-center subheader">{{ title }}</h1>
 
 <div class="container">
-  <app-prestation-category></app-prestation-category>
+  <app-prestation-category *ngFor="let category of categoriesToDisplay"
+  [title]="category.title"
+  [presations]="groupByCategory[category.id]"></app-prestation-category>
+
 </div>

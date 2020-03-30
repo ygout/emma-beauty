@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Prestation } from 'src/app/shared/models/prestation';
 
 @Component({
   selector: 'app-prestation-card',
@@ -7,15 +8,16 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 })
 export class PrestationCardComponent implements OnInit {
 
+  @Input() prestation: Prestation;
   @Input() isOpen: boolean = false;
-  /**
-   * Emitted when user clicks on group titlebar
-   * @type {EventEmitter<any>}
-   */
-  @Output() toggle: EventEmitter<any> = new EventEmitter<any>();
+  @Output() toggle: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
   ngOnInit(): void {
   }
 
+  closeOrOpen() {
+    this.isOpen = !this.isOpen;
+    this.toggle.emit(this.isOpen);
+  }
 }

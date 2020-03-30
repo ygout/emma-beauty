@@ -1,11 +1,20 @@
 <div class="accordion-card mt-3">
-  <div class="accordion-header">
-    <h3 class="accordion-title" ><i [ngClass]="(!isOpen)? 'fas fa-plus': 'fas fa-minus'" class="margin-icon"></i>Visage</h3>
-    <p class="accordion-price">à partir de 5€</p>
+  <div class="accordion-header" (click)="closeOrOpen()">
+    <h3 class="accordion-title">
+      <i
+        [ngClass]="!isOpen ? 'fas fa-plus' : 'fas fa-minus'"
+        class="margin-icon"
+      ></i
+      >{{ prestation.title }}
+    </h3>
+    <p class="accordion-price">à partir de {{ prestation.price }}€</p>
   </div>
-  <div class="accordion-content" [ngClass]="{'accordion-hidden-content': !isOpen}">
+  <div
+    class="accordion-content"
+    [ngClass]="{ 'accordion-hidden-content': !isOpen }"
+  >
     <p>
-      <em>sourcils 7€ <em>lèvre supérieur 5€</em></em>
+      {{ prestation.description }}
     </p>
     <em> </em>
   </div>
