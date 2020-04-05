@@ -4,9 +4,9 @@ import { PublicRoutingModule } from './public-routing.module';
 import { HomeModule } from './home/home.module';
 import { ContactModule } from './contact/contact.module';
 import { PrestationsModule } from './prestations/prestations.module';
-import { PortfolioModule } from './portfolio/portfolio.module';
 import { SharedModule } from '../shared/shared.module';
 import { SharedPublicModule } from './shared/shared.module';
+import { GalleryModule } from './gallery/gallery.module';
 
 
 @NgModule({
@@ -17,8 +17,8 @@ import { SharedPublicModule } from './shared/shared.module';
     HomeModule,
     ContactModule,
     PrestationsModule,
-    PortfolioModule,
     SharedPublicModule,
+    GalleryModule,
   ]
 })
 export class PublicModule { }
