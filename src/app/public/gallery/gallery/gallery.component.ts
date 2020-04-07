@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { NgxMasonryOptions } from "ngx-masonry";
 
 @Component({
   selector: "app-gallery",

@@ -1,0 +1,85 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputFirstname">Prénom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputFirstname"
+          placeholder="Prénom"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputName">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputName"
+          placeholder="Nom"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputMail">Adresse Mail</label>
+        <input
+          type="mail"
+          class="form-control"
+          id="inputMail"
+          placeholder="Adresse mail"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPhone">Tél</label>
+        <input
+          type="number"
+          class="form-control"
+          id="inputPhone"
+          placeholder="Numéro de téléphone"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="my-1 mr-2" for="selectPrestations">Préstations</label>
+      <select class="form-control" id="selectPrestations">
+        <option value="" hidden>Préstations</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <div
+        class="input-group date"
+        data-target-input="nearest"
+        NgTempusdominusBootstrap
+      >
+        <input
+          class="form-control"
+          formControlName="date"
+          [options]="options"
+          NgTempusdominusBootstrapInput
+          type="text"
+          [ngClass]="{'is-invalid': form.get('date').errors && form.get('date').touched}"
+        />
+        <div class="input-group-append" NgTempusdominusBootstrapToggle>
+          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="textareaMessage">Votre message</label>
+      <textarea
+        class="form-control"
+        id="textareaMessage"
+        rows="7"
+        placeholder="Saisissez votre message"
+      ></textarea>
+    </div>
+    <div class="col text-center">
+      <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+    </div>
+  </form>
+</div>

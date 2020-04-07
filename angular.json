@@ -28,10 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.scss",
               "./node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "src/styles.scss"
+              "./node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/moment/min/moment.min.js",
+              "./node_modules/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,8 +99,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
