@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-center">
+  <button *ngFor="let category of AllImageCategories" type="button"
+   class="btn btn-outline-primary mr-3"
+  (click)="onSelectedCategory(category)"
+  [class.active]= "activeCategory === category">{{category.title}}</button>
+</div>

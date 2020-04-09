@@ -8,17 +8,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
   styleUrls: ["./appointment.component.scss"],
 })
 export class AppointmentComponent implements OnInit {
-  form: FormGroup;
-  options: any = { format: "DD-MM-YYYY hh:mm" };
+  constructor() {}
 
-  constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      date: [moment("2015-11-18T00:00Z"), Validators.required],
-    });
-  }
-
-  reset(): void {
-    this.form.controls["date"].reset();
-  }
   ngOnInit(): void {}
 }

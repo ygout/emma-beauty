@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Prestation } from 'src/app/shared/models/prestation';
-import { Category } from 'src/app/shared/models/category';
+import { Prestation, Category } from '@/shared/models';
+
 
 @Component({
   selector: 'app-prestations',
@@ -11,6 +11,7 @@ import { Category } from 'src/app/shared/models/category';
 export class PrestationsComponent implements OnInit {
 
   title = "Mes Préstations";
+
   categories: Category[] = [
     {
       id: "category1",
@@ -78,6 +79,7 @@ export class PrestationsComponent implements OnInit {
    categoriesToDisplay: Category[] = this.categories.filter((el) => {
     return Object.keys(this.groupByCategory).indexOf(el.id) >= 0;
    });
+
   constructor(private titleService: Title) { }
 
   ngOnInit(): void {
