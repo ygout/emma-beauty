@@ -1,10 +1,9 @@
 <h1 class="text-center subheader">{{ title }}</h1>
 
 <div class="container">
-  <app-gallery-tag-filter [AllImageCategories]="categories" (selectedCategory)="filteredByCategorySelected($event)"></app-gallery-tag-filter>
-  <div class="card-columns mt-3">
-    <div *ngFor="let image of masonryImages" class="card">
-      <img class="card-img" [src]="image.imgSrc" alt="Card image" />
-    </div>
+  <app-gallery-tag-filter [AllImageCategories]="categories" (selectedCategory)="filteredByCategorySelected($event)">
+  </app-gallery-tag-filter>
+  <div class="mt-4">
+    <ngx-masonry-gallery [width]="250" [images]="images"></ngx-masonry-gallery>
   </div>
 </div>

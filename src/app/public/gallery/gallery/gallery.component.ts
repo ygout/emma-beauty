@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { Category } from "@/shared/models";
+import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
+
 
 @Component({
   selector: "app-gallery",
@@ -334,8 +336,13 @@ export class GalleryComponent implements OnInit {
       title: "Massage",
     },
   ];
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title) { }
 
+  public get images(): IMasonryGalleryImage[] {
+    return this.masonryImages.map(m => <IMasonryGalleryImage>{
+      imageUrl: m.imgSrc
+    });
+  }
   filteredByCategorySelected(categoryIdSelected: string) {
 
     let imagesFilteredByCategory = [];
