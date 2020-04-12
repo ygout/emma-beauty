@@ -4,6 +4,6 @@
   <app-gallery-tag-filter [AllImageCategories]="categories" (selectedCategory)="filteredByCategorySelected($event)">
   </app-gallery-tag-filter>
   <div class="mt-4">
-    <ngx-masonry-gallery [width]="250" [images]="images"></ngx-masonry-gallery>
+    <ngx-masonry-gallery [width]="250" [images]="images" (clickImage)="open($event)"></ngx-masonry-gallery>
   </div>
 </div>

@@ -2,14 +2,24 @@ import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { Category } from "@/shared/models";
 import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
+import { Lightbox, IAlbum } from 'ngx-lightbox';
 
+class Image implements IMasonryGalleryImage, IAlbum{
+  imageUrl: string;
+  alt?: string;
+  id: number;
+  src: string;
+  thumb: string;
+}
 
 @Component({
   selector: "app-gallery",
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
 })
+
 export class GalleryComponent implements OnInit {
+
   title = "Mes Expériences";
   limit = 5;
   masonryImages;
@@ -336,12 +346,17 @@ export class GalleryComponent implements OnInit {
       title: "Massage",
     },
   ];
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private _lightbox: Lightbox) { }
 
-  public get images(): IMasonryGalleryImage[] {
-    return this.masonryImages.map(m => <IMasonryGalleryImage>{
-      imageUrl: m.imgSrc
-    });
+  public get images(): Image[] {
+    return this.masonryImages.map((m, index) => {
+      return <Image>{
+        imageUrl: m.imgSrc,
+        id: index,
+        src: m.imgSrc,
+      }
+    }
+    );
   }
   filteredByCategorySelected(categoryIdSelected: string) {
 
@@ -369,5 +384,15 @@ export class GalleryComponent implements OnInit {
   showMoreImages() {
     this.limit += 15;
     this.masonryImages = this.dummyPictures.slice(0, this.limit);
+  }
+
+  open(image: Image): void {
+    // open lightbox
+    this._lightbox.open(this.images, image.id);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
   }
 }
