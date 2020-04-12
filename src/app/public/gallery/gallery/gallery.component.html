@@ -4,7 +4,7 @@
   <app-gallery-tag-filter [AllImageCategories]="categories" (selectedCategory)="filteredByCategorySelected($event)"></app-gallery-tag-filter>
   <div class="card-columns mt-3">
     <div *ngFor="let image of masonryImages" class="card">
-      <img class="card-img" [src]="image.imgSrc" alt="Card image" />
+      <img class="card-img" [src]="image.url" alt="Card image" />
     </div>
   </div>
 </div>
