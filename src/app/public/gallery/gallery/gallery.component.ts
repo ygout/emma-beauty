@@ -1,39 +1,27 @@
 import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { Category, Image } from "@/shared/models";
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate,
-  group,
-} from "@angular/animations";
-import { ImageService } from "@/shared/services/image.service";
+import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
+import { Lightbox, IAlbum } from 'ngx-lightbox';
+import { ImageService } from '@/shared/services/image.service';
+
+class ImageMansory implements IMasonryGalleryImage, IAlbum{
+  imageUrl: string;
+  alt?: string;
+  id: number;
+  src: string;
+  thumb: string;
+}
 
 @Component({
   selector: "app-gallery",
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
-  animations: [
-    trigger("simpleFadeAnimation", [
-      state(
-        "in",
-        style({
-          opacity: 1,
-        })
-      ),
-
-      // fade in when created. this could also be written as transition('void => *')
-      transition(":enter", [style({ opacity: 0 }), animate(600)]),
-
-      // fade out when destroyed. this could also be written as transition('void => *')
-      transition(":leave", animate(600, style({ opacity: 0 }))),
-    ]),
-  ],
 })
+
 export class GalleryComponent implements OnInit {
-  title = "Mes Expériences";
+
+  title = "Galerie";
   limit = 5;
   masonryImages: Image[];
   dummyPictures: Image[];
@@ -51,22 +39,17 @@ export class GalleryComponent implements OnInit {
       title: "Massage",
     },
   ];
-  constructor(
-    private titleService: Title,
-    private imageService: ImageService
-  ) {}
+  constructor(private _titleService: Title, private _lightbox: Lightbox, private _imageService: ImageService) { }
 
-  // set property show to true for category selectionned
-  showPictureByCategory(categoryId: string) {
-    // ALL PICTURES
-    this.dummyPictures.map((el) => {
-      if (categoryId === "ALL" || el.tag === categoryId) el.show = true;
-      else el.show = false;
-    });
-
-    console.log("showPictureByCategory", this.dummyPictures);
-
-    this.masonryImages = this.dummyPictures.slice(0, this.limit);
+  public get images(): ImageMansory[] {
+    return this.masonryImages.map((m, index) => {
+      return <ImageMansory>{
+        imageUrl: m.url,
+        id: index,
+        src: m.url,
+      }
+    }
+    );
   }
 
   filteredByCategorySelected(categoryId: string) {
@@ -78,8 +61,6 @@ export class GalleryComponent implements OnInit {
     }
 
     this.dummyPictures.forEach((element) => {
-      console.log(element);
-
       if (element.tag === categoryId) {
         imagesFilteredByCategory.push(element);
       }
@@ -89,15 +70,25 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle(this.title);
-    this.imageService
+    this._titleService.setTitle(this.title);
+    this._imageService
       .getImages()
       .subscribe((images) => (this.dummyPictures = images));
-    this.showPictureByCategory("ALL");
+    this.filteredByCategorySelected("ALL");
   }
 
   showMoreImages() {
     this.limit += 15;
     this.masonryImages = this.dummyPictures.slice(0, this.limit);
+  }
+
+  open(image: ImageMansory): void {
+    // open lightbox
+    this._lightbox.open(this.images, image.id);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
   }
 }

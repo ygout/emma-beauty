@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollToTopDirective } from './directives/scroll-to-top.directive';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MasonryGalleryModule } from 'ngx-masonry-gallery';
+import { LightboxModule } from 'ngx-lightbox';
+
 
 @NgModule({
   declarations: [ScrollToTopDirective],
@@ -13,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ScrollToTopDirective,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    MasonryGalleryModule,
+    LightboxModule
   ]
 })
 export class SharedModule { }
