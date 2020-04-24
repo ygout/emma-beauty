@@ -16,13 +16,14 @@
     ],
     "lib": [
       "es2018",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "paths": {
       "@/*": [
-          "src/app/*"
+        "src/app/*"
       ]
-  }
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
