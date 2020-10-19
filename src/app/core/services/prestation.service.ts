@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
-import { Category, Prestation } from "../models";
+import { Category, Prestation } from '../models';
 
 export class PrestationGroupByCategory {
   categoryId: string;

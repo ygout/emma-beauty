@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
-import { Category, Image } from "@/shared/models";
 import { IMasonryGalleryImage } from 'ngx-masonry-gallery';
 import { Lightbox, IAlbum } from 'ngx-lightbox';
-import { ImageService } from '@/shared/services/image.service';
+import { Category, Image } from '@/core/models';
+import { ImageService } from '@/core/services/image.service';
 
 class ImageMansory implements IMasonryGalleryImage, IAlbum{
   imageUrl: string;

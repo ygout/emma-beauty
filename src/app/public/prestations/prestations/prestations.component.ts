@@ -1,6 +1,7 @@
+import { Category, Prestation } from '@/core/models';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Prestation, Category } from '@/shared/models';
+
 
 
 @Component({

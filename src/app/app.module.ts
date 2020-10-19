@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { SharedPublicModule } from './public/shared/shared.module';
-import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -17,13 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    CoreModule,
     BrowserAnimationsModule,
     SharedModule,
-    SharedPublicModule,
-    GraphQLModule,
-    HttpClientModule
+    CoreModule,
   ],
   providers: [Title],
   bootstrap: [AppComponent]

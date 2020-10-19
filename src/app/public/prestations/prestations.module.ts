@@ -9,7 +9,7 @@ import { PrestationCategoryComponent } from './prestation-category/prestation-ca
 @NgModule({
   declarations: [PrestationsComponent, PrestationCardComponent, PrestationCategoryComponent],
   imports: [
-    SharedModule
+    SharedModule,
   ]
 })
 export class PrestationsModule { }

@@ -5,7 +5,6 @@ import { HomeModule } from './home/home.module';
 import { AppointmentModule } from './appointment/appointment.module';
 import { PrestationsModule } from './prestations/prestations.module';
 import { SharedModule } from '../shared/shared.module';
-import { SharedPublicModule } from './shared/shared.module';
 import { GalleryModule } from './gallery/gallery.module';
 
 
@@ -17,7 +16,6 @@ import { GalleryModule } from './gallery/gallery.module';
     HomeModule,
     AppointmentModule,
     PrestationsModule,
-    SharedPublicModule,
     GalleryModule,
   ]
 })

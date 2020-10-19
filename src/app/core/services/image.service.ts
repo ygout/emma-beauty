@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Category } from "@/shared/models";
-import { Image } from "@/shared/models";
+import { Image } from '../models';
 
 
 @Injectable({

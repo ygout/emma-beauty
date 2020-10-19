@@ -1,5 +1,5 @@
+import { Prestation } from '@/core/models';
 import { Component, ViewChildren, QueryList, AfterViewInit, Input } from '@angular/core';
-import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationCardComponent } from '../prestation-card/prestation-card.component';
 
 @Component({

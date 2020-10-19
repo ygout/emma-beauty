@@ -1,5 +1,5 @@
+import { Prestation } from '@/core/models';
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { Prestation } from 'src/app/shared/models/prestation';
 
 @Component({
   selector: 'app-prestation-card',

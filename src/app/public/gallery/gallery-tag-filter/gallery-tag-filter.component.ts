@@ -1,5 +1,5 @@
+import { Category } from '@/core/models';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Category } from '@/shared/models';
 
 @Component({
   selector: 'app-gallery-tag-filter',
