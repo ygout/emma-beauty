@@ -23,7 +23,7 @@
     "@types/jquery": "^3.3.33",
     "apollo-angular": "^1.9.1",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ngx-bootstrap": "^5.5.0",
     "ngx-lightbox": "^2.1.2",
