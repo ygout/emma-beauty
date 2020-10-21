@@ -11,11 +11,12 @@ import { HttpErrorInterceptor } from "./interceptors/http-error.interceptor";
 
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { SharedModule } from '@/shared/shared.module';
 
 registerLocaleData(localeFr);
 @NgModule({
   declarations: [NavbarComponent, FooterComponent, ProjectLayoutComponent],
-  imports: [CommonModule, HttpClientModule, RouterModule],
+  imports: [CommonModule, HttpClientModule, RouterModule, SharedModule],
   exports: [HttpClientModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' },

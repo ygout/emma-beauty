@@ -10,10 +10,11 @@ const PUBLIC_ROUTES: Routes = [
   { path: "prestations", component: PrestationsComponent },
   { path: "gallery", component: GalleryComponent },
   { path: "appointment", component: AppointmentComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(PUBLIC_ROUTES)],
   exports: [RouterModule],
 })
-export class PublicRoutingModule {}
+export class PublicRoutingModule { }
