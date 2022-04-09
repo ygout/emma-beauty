@@ -24,7 +24,7 @@
     "apollo-angular": "^1.9.1",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-bootstrap": "^5.5.0",
     "ngx-lightbox": "^2.1.2",
     "ngx-masonry-gallery": "^3.0.0",
